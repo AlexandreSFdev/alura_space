@@ -8,5 +8,5 @@ urlpatterns = [
     path('', index, name='index'), 
     
     # Mapeia a URL 'imagem.html' para a função 'imagem'
-    path('imagem/', imagem, name='imagem'), 
+    path('imagem/<int:foto_id>', imagem, name='imagem'), 
 ]

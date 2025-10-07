@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from galeria.models import Fotografia
 
@@ -9,6 +9,7 @@ def index(request):
     # Renderiza o template index.html (você já consegue acessá-lo)
     return render(request, 'galeria/index.html', {"cards": fotografias}) 
 
-def imagem(request):
+def imagem(request, foto_id):
     # Renderiza o template imagem.html
-    return render(request, 'galeria/imagem.html')
+    fotografia = get_object_or_404(Fotografia, pk=foto_id)
+    return render(request, 'galeria/imagem.html', {"fotografia": fotografia})
