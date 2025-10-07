@@ -5,7 +5,7 @@ from galeria.models import Fotografia
 # Create your views here.
 
 def index(request):
-    fotografias = Fotografia.objects.all()
+    fotografias = Fotografia.objects.order_by("-data_fotografia").filter(publicada=True)
     # Renderiza o template index.html (você já consegue acessá-lo)
     return render(request, 'galeria/index.html', {"cards": fotografias}) 
 
