@@ -9,4 +9,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Adiciona a rota raiz ('') para incluir as URLs da aplicação 'galeria'
     path('', include('galeria.urls')), 
+    path('', include('usuarios.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
