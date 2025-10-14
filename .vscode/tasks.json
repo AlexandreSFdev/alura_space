@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Iniciar Terminal Venv (PowerShell)",
+            "type": "shell",
+            "command": "powershell.exe", // ALTERADO: Comando para iniciar o PowerShell
+            "isBackground": true,         // MANTÉM O TERMINAL ABERTO
+            "runOptions": {
+                "runOn": "folderOpen" 
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "close": false 
+            },
+            "problemMatcher": [] 
+        }
+    ]
+}
