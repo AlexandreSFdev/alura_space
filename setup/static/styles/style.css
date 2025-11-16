@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(#AAA539,#CAC560,#AAA539);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -84,7 +84,7 @@ table {
 .cabecalho__busca {
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #EAE690,#ff8a40);
     display: flex;
     height: auto;
     justify-content: space-between;
@@ -93,36 +93,48 @@ table {
 }
 
 .busca__fundo {
+    display: flex;
     align-items: center;
-    background-color: #041A37;
+    background-color: #fdeedf;
     border-radius: 8px;
     display: flex;
     margin: 0 auto;
     width: 100%;
+    height: 40px;
+    padding: 0 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden; /* Garante que nada saia do contêiner */
 }
 
 .busca__input {
+    flex-grow: 1;
     align-items: center;
     background-color: transparent;
     border: none;
     font-size: 1rem;
-    height: 24px;
-    padding: 10px;
+    height: 100%;
+    padding: 0 10px;
     width: 500px;
+    outline: none; /* Remove a borda de foco padrão */
 }
 
-.busca__icone {
+/* .busca__icone {
+    flex-shrink: 0;
+    margin-left: 8px;
+    font-size: 18px;
     cursor: pointer;
     width: 2rem;
     height: 2rem;
 }
+*/
 
 .cards {
     width: 100%;
 }
 
 .cards__titulo {
-    color: #7B78E5;
+    color: #754d34;
     font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
@@ -261,13 +273,13 @@ table {
     display: flex;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    color: #D9D9D9;
+    color: #fdeedf;
     font-size: 24px;
 }
 
 .menu-lateral__navegacao a:first-child {
     font-weight: bold;
-    color: #7B78E5;
+    color: #754d34;
 }
 
 .menu-lateral__navegacao img {
@@ -304,7 +316,7 @@ table {
     width: 100%;
     height: 50px;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #f0e1c3,#efa620);
     padding: 2px;
     box-sizing: border-box;
 }
@@ -333,7 +345,7 @@ table {
 }
 
 .rodape {
-    background-color: #04244F;
+    background-color: #6A6605;
     width: 100%;
     padding: 1.5rem 3rem;
     box-sizing: border-box;
@@ -356,7 +368,7 @@ table {
     padding: 1.5rem 0;
     display: flex;
     align-items: center;
-    color: #D9D9D9;
+    color: #754d34;
     font-size: 1.3rem;
 }
 
@@ -369,7 +381,7 @@ table {
 }
 
 .tags__tag {
-    background-color: #D9D9D930;
+    background-color: #fdeedf;
     margin-right: 1.5rem;
     border-radius: 8px;
     padding: .8rem .5rem;
@@ -379,7 +391,7 @@ table {
 }
 
 .tags__tag:hover {
-    border: 2px solid #7B78E5;
+    border: 2px solid #331a0a;
     cursor: pointer;
 }
 
@@ -533,4 +545,24 @@ table {
     appearance: none;
     -webkit-print-color-adjust: exact;
     color-adjust: exact;
+}
+
+.btn_search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    /* 2. Garante que o botão preencha a altura do contêiner */
+    height: 100%;
+    
+    /* 3. Ajusta o espaçamento interno do botão */
+    padding: 0 10px; 
+    
+    /* 4. Garante que o ícone dentro do botão fique centralizado */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 8px; /* Espaçamento entre o campo e o ícone */
+    font-size: 18px;
+    width: 2rem;
 }

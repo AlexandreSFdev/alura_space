@@ -1,13 +1,13 @@
 {% load static %}
 <div class="pagina-inicial">
     <header class="cabecalho">
-        <img src="{% static 'assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
+        <img src="{% static 'assets/logo/Logo(2).png' %}" alt="Receitas de Família logo" width="150px" height="150px"/>
         {% include 'partials/_alertas.html' %}
         <div class="cabecalho__busca">
             <div class="busca__fundo">
                 <form action="{% url 'buscar' %}">
                     <input class="busca__input" type="text" name="buscar" placeholder="O que você procura?">
-                    <button type="submit">
+                    <button type="submit" class="btn_search">
                         <img class="busca__icone" src="{% static 'assets/ícones/1x/search.png' %}" alt="ícone de search">
                     </button>
                 </form>
@@ -17,10 +17,10 @@
     <main class="principal">
         <section class="menu-lateral">
             <nav class="menu-lateral__navegacao">
-                <a href="{% url 'index' %}"><img src="{% static 'assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                <a href="{% url 'login' %}"><img src="{% static 'assets/ícones/1x/Mais vistas - inativo.png' %}"> Login</a>
-                <a href="{% url 'cadastro' %}"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Cadastro</a>
-                <a href="{% url 'logout' %}"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Logout</a>
-                <a href="{% url 'nova_imagem' %}"><img src="{% static 'assets/ícones/1x/new_white.png' %}" width="34" height="34"> Nova Imagem</a>
+                <a href="{% url 'index' %}"><img src="{% static 'assets/ícones/1x/kitchen.png' %}"> Home</a>
+                <a href="{% url 'login' %}"><img src="{% static 'assets/ícones/1x/chef_icon.png' %}"> Login</a>
+                <a href="{% url 'cadastro' %}"><img src="{% static 'assets/ícones/1x/inscription.png' %}"> Cadastro</a>
+                <a href="{% url 'logout' %}"><img src="{% static 'assets/ícones/1x/menu.png' %}"> Logout</a>
+                <a href="{% url 'nova_imagem' %}"><img src="{% static 'assets/ícones/1x/blender.png' %}" width="34" height="34"> Nova Receita</a>
             </nav>
         </section>
